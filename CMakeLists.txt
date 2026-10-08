@@ -1,10 +1,11 @@
 # 1. Specify minimum required version of CMake
 cmake_minimum_required(VERSION 3.15)
 
-# 2. Set the project name, version, and language
-project(WebServer VERSION 1.0 LANGUAGES C)
 
-# 3. Specify the C standard
+project(WebServer VERSION 1.0 LANGUAGES C)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 
@@ -13,10 +14,12 @@ set(CMAKE_C_FLAGS_DEBUG "-g")
 
 set(SOURCES
     src/main.c
+    src/handle_client.c
+    src/network.c
+    src/sig_utils.c
 )
 
 
-# 4. Define an executable target: executable_name source_files...
 add_executable(websever ${SOURCES})
 
 

@@ -1,0 +1,7 @@
+{
+    "cmake.configureOnOpen": true,
+    "C_Cpp.default.compilerPath": "C:/msys64/ucrt64/bin/gcc.exe",
+"code-runner.executorMap": {
+    "c": "cd $workspaceRoot && gcc -Iinclude src/*.c -o websever.exe -lws2_32 && .\\websever.exe"
+}
+}
